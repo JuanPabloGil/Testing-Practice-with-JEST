@@ -7,3 +7,7 @@ test('Capitalize parameter its not a string ', () => {
 test('Capitalize parameter its a valid string ', () => {
   expect(capitalize('juan')).toBe('Juan');
 });
+
+test('Start strin with symbols ', () => {
+  expect(capitalize('.juan')).toBe('.juan');
+});
