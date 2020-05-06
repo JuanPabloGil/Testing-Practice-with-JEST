@@ -1,22 +1,31 @@
 const analyze = require('./analyze');
 
-
-test('return correct average', () => {
-  const arr = analyze([1, 8, 3, 4, 2, 6]);
-  expect(arr.average).toBe(4);
+test('no valid array', () => {
+  expect(analyze({})).toBe('No valid enter');
 });
 
-test('return the minimun number on the array', () => {
-  const arr = analyze([1, 8, 3, 4, 2, 6]);
-  expect(arr.average).toBe(4);
+test('empty array', () => {
+  expect(analyze([])).toBe('No valid enter');
 });
 
-test('return the Maximum number on the array', () => {
-  const arr = analyze([1, 8, 3, 4, 2, 6]);
-  expect(arr.average).toBe(4);
+test('return correct answer object', () => {
+  expect(analyze([1, 8, 'NaN', 4, 2, 6])).toBe('No valid enter');
 });
 
-test('return the length of the array', () => {
-  const arr = analyze([1, 8, 3, 4, 2, 6]);
-  expect(arr.average).toBe(4);
+test('return correct answer object', () => {
+  expect(analyze([1, 8, '3', 4, 2, 6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
+});
+
+test('return correct answer object', () => {
+  expect(analyze([1, 8, 3, 4, 2, 6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
 });

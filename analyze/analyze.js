@@ -1,4 +1,33 @@
+function validate(arr) {
+  const indexesToConvert = [];
+  if (
+    typeof Array.isArray(arr)
+    && arr.length > 0
+  ) {
+    const invalid = arr.some((value, index) => {
+      if (typeof value === 'string') {
+        indexesToConvert.push(index);
+      }
+      return Object.is(parseInt(value, 10), NaN);
+    });
+    if (invalid) {
+      return null;
+    }
+    return indexesToConvert;
+  }
+  return null;
+}
+
 function analyze(arr) {
+  const valid = validate(arr);
+  if (valid) {
+    valid.forEach((index) => {
+      arr[index] = parseInt(arr[index], 10);
+    });
+  } else {
+    return 'No valid enter';
+  }
+
   const obj = {};
 
   let average = 0;
