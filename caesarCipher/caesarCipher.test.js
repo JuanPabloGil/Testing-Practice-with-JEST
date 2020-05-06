@@ -17,8 +17,12 @@ test('works with negative shift', () => {
   expect(caesar('Mjqqt, Btwqi!', -5)).toBe('Hello, World!');
 });
 
-test('wraps', () => {
+test('wraps Uppercase', () => {
   expect(caesar('Z', 1)).toBe('A');
+});
+
+test('wraps Lowercase', () => {
+  expect(caesar('z', 1)).toBe('a');
 });
 
 test('works with large shift factors', () => {
