@@ -1,6 +1,5 @@
 # Testing-Practice-with-JEST
 
-
 > Testing functions on diferents files with Jest.
 
 <p align="center">
