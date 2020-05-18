@@ -1,0 +1,26 @@
+{
+  "name": "Testing-Practice-with-JEST",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanPabloGil/Testing-Practice-with-JEST.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanPabloGil/Testing-Practice-with-JEST/issues"
+  },
+  "homepage": "https://github.com/JuanPabloGil/Testing-Practice-with-JEST#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^26.0.1"
+  }
+}
